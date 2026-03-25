@@ -91,6 +91,6 @@ class one8loader extends HTMLElement {
 }
 
 // <one8-loader> 라는 이름으로 태그 등록
-if (!customElements.get('one8-loader')) {
-    customElements.define('one8-loader', one8loader);
+if (!customElements.get('oneui8-loader')) {
+    customElements.define('oneui8-loader', one8loader);
 }
