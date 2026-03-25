@@ -90,7 +90,7 @@ class GalaxyLoader extends HTMLElement {
     }
 }
 
-// <galaxy-loader> 라는 이름으로 태그 등록
-if (!customElements.get('galaxy-loader')) {
-    customElements.define('galaxy-loader', GalaxyLoader);
+// <one8-loader> 라는 이름으로 태그 등록
+if (!customElements.get('one8-loader')) {
+    customElements.define('one8-loader', one8loader);
 }
