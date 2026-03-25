@@ -13,7 +13,8 @@ One UI 8 스타일의 부드럽고 현대적인 갤럭시 로딩 애니메이션
 
 먼저 HTML 파일에 스크립트를 추가한 뒤, 원하는 곳에 태그를 넣거나 자바스크립트로 제어하세요.
 
-```<script src="https://cdn.jsdelivr.net/gh/jaewondev27/one-ui-8-loader/galaxy-loader.js"></script>
+```html
+<script src="https://cdn.jsdelivr.net/gh/jaewondev27/one-ui-8-loader/galaxy-loader.js"></script>
 
 <galaxy-loader size="1.5" speed="2.0"></galaxy-loader>
 
