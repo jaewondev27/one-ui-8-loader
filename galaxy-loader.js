@@ -52,17 +52,22 @@ class GalaxyLoader extends HTMLElement {
                 transform: translate(-50%, -50%);
                 width: 5px;
                 height: 5px;
+                /* 기본 색상: 파란색 계열 (2, 4번 원) */
                 background: linear-gradient(to bottom, #74b9ff 0%, rgba(4, 129, 255, 0.7) 100%);
                 border-radius: 50%;
                 content: "";
             }
-            .bx i:first-child { z-index: 10; }
-            .bx i:first-child::before {
+
+            /* 대각선에 위치한 1번과 3번 원을 초록색으로 변경 */
+            .bx i:nth-child(1)::before,
+            .bx i:nth-child(3)::before {
                 background: linear-gradient(to bottom, #55efc4 0%, rgba(0, 213, 147, 0.7) 100%);
             }
-            .bx i:nth-child(1) { --angle: 0deg; }
+
+            /* 각 원의 각도 및 레이어 순서 설정 */
+            .bx i:nth-child(1) { z-index: 10; --angle: 0deg; }
             .bx i:nth-child(2) { --angle: 90deg; }
-            .bx i:nth-child(3) { --angle: 180deg; }
+            .bx i:nth-child(3) { z-index: 10; --angle: 180deg; }
             .bx i:nth-child(4) { --angle: 270deg; }
 
             @keyframes moveDistance {
@@ -86,4 +91,6 @@ class GalaxyLoader extends HTMLElement {
 }
 
 // <galaxy-loader> 라는 이름으로 태그 등록
-customElements.define('galaxy-loader', GalaxyLoader);
+if (!customElements.get('galaxy-loader')) {
+    customElements.define('galaxy-loader', GalaxyLoader);
+}
