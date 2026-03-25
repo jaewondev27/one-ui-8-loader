@@ -1,4 +1,4 @@
-class GalaxyLoader extends HTMLElement {
+class one8loader extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' }); // Shadow DOM을 사용하여 기존 CSS와 충돌 방지
